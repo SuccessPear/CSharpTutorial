@@ -1,0 +1,45 @@
+Ex1: Write a program in C# Sharp to display the characters and frequency of each character in a given string in acsending order.
+Test Data:
+Input the string: media platform - solution group 
+Expected Output:
+The frequency of the characters are :
+Character  : 4 times
+Character -: 1 times
+Character a: 2 times
+Character d: 1 times
+Character e: 1 times
+Character f: 1 times
+Character g: 1 times
+Character i: 2 times
+Character l: 2 times
+Character m: 2 times
+Character n: 1 times
+Character o: 4 times
+Character p: 2 times
+Character r: 2 times
+Character s: 1 times
+Character t: 2 times
+Character u: 2 times
+
+
+Ex2: Write a program in C# Sharp to find the number of an array and the square of each number which is greater than 20
+Test Data: 1, 3, 5, 7, 9
+
+Expected Output :
+{ number = 5, sqrtNum = 25 }
+{ number = 7, sqrtNum = 49 }
+{ number = 9, sqrtNum = 81 }
+
+Ex3: Write a program in C# Sharp to display numbers, multiplication of numbers with frequency and the frequency of a number in an array, sorted in ascending order.
+Test Data : 5, 1, 9, 2, 3, 7, 4, 5, 6, 8, 7, 6, 3, 4, 5, 2
+
+Expected Output :
+Num: 1  Frequency: 1    Product: 1
+Num: 2  Frequency: 2    Product: 4
+Num: 3  Frequency: 2    Product: 6
+Num: 4  Frequency: 2    Product: 8
+Num: 5  Frequency: 3    Product: 15
+Num: 6  Frequency: 2    Product: 12
+Num: 7  Frequency: 2    Product: 14
+Num: 8  Frequency: 1    Product: 8
+Num: 9  Frequency: 1    Product: 9
