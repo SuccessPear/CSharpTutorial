@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Net.WebSockets;
 
 namespace Exercise;
 class LinqExercise04
@@ -83,10 +84,47 @@ class LinqExercise04
         }
     }
 
-    public static void GetOldestPerson()
+    public static void GetOldestPeople()
     {
-        
+        var query = from customer in customers
+                    group customer by customer.Age into y
+                    orderby y.Key descending
+                    select y;
+
+        Console.WriteLine("Oldest people are: \n");
+        foreach (var customer in query.FirstOrDefault()) 
+        {
+            Console.WriteLine("Name: " + customer.Name + "\tID: " + customer.ID + "\n");
+        }
     }
 
-    
+    public static void OrderByNameAndIDAscending()
+    {
+        var query = from customer in customers
+                    let name = customer.Name.Split(" ")
+                    orderby name.Length > 0 ? name[^1] : string.Empty, customer.ID
+                    select customer;
+
+        foreach (var customer in query)
+        {
+            Console.WriteLine("Name: " + customer.Name + "\tID: " + customer.ID + "\n");
+        }
+    }
+
+    public static void GetRichestPeople()
+    {
+        //to be continue
+        var queryAccount = from account in bankAccounts
+                           group account by account.CustomerID into totalAccount
+                           group totalAccount by totalAccount.Sum(x => x.Deposit - x.Debt) into y
+                           orderby y.Key descending
+                           select y;
+
+        var richestCustomers = queryAccount.FirstOrDefault();
+        var queryCustomer = from customer in customers
+                            join richestCustomer in richestCustomers on customer.ID equals richestCustomer.CustomerID
+                            select customer;
+
+
+    }
 }
