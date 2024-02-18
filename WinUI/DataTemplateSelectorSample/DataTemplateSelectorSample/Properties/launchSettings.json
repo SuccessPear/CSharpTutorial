@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DataTemplateSelectorSample (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DataTemplateSelectorSample (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
