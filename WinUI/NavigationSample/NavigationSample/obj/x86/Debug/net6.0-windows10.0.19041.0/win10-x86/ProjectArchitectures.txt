@@ -1,0 +1,1 @@
+D:\Download\BKHN\LearnCode\Seminar2024\CSharpTutorial\WinUI\NavigationSample\NavigationSample\NavigationSample.csproj;x86
